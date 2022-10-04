@@ -1,1 +1,3 @@
-print("Hello DICT!")
+print("python")
+#new string
+print("DICT")
