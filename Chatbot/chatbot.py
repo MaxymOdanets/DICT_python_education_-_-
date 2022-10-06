@@ -12,3 +12,12 @@ a = int(input("Now I will prove to you that I can count to any number you want.\
 for i in range(a +1):
     print(str(i)+ "!")
 print("Completed,Have a nice day!")
+print("Let's test you.\nDo tou love KhAI? ")
+print("1.Of course! \n2.No:(")
+while True:
+    k = int(input(">"))
+    if k==1:
+        print("Cool,KhAI love you too!\nCongratulations,have a nice day!")
+        break
+    else:
+        print("Please try again")
