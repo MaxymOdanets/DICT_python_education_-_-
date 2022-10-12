@@ -1,5 +1,9 @@
+import random
+from random import choice
+
 print("HANGMAN\nThe game will be available soon.")
-word = ["python"]
+words = ["python" , "java" , "php" , "html"]
+word = random.choice(words)
 a = input("Guess the word :\n>")
 while True:
     if a == word:
