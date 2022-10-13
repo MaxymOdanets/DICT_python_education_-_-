@@ -16,8 +16,8 @@ print("Let's test you.\nDo tou love KhAI? ")
 print("1.Of course! \n2.No:(")
 while True:
     k = int(input(">"))
-    if k==1:
-        print("Cool,KhAI love you too!\nCongratulations,have a nice day!")
+    if k == 1:
+        print("Cool,KHAI love you too!\nCongratulations,have a nice day!")
         break
     else:
         print("Please try again")
