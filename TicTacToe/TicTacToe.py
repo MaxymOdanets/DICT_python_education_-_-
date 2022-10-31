@@ -4,13 +4,11 @@ game = [
     ["", "", ""]
 ]
 
-
 def print_board(board):
     print("---------")
     for row in board:
         print("| " + " ".join(row) + " |")
     print("---------")
-
 
 def valid_play(cells):
     if len(cells) != 9:
@@ -22,16 +20,13 @@ def valid_play(cells):
             return False
     return True
 
-
 def update_board(row, row_number):
     game[row_number] = row
-
 
 def play(cells):
     update_board(list(cells[3:]), 0)
     update_board(list(cells[3:6]), 1)
     update_board(list(cells[:3]), 2)
-
 
 def game_status(game):
     winner = get_winner(game)
@@ -41,7 +36,6 @@ def game_status(game):
         return "Game not finished"
     else:
         return "Draw"
-
 
 def valid_game(game, cells):
     diff = cells.count('X') - cells.count('O')
@@ -64,7 +58,6 @@ def valid_game(game, cells):
         return True
     return False
 
-
 def get_winner(game):
     for row in range(0, 3):
         if game[row][0] == game[row][1] == game[row][2] != '':
@@ -77,7 +70,6 @@ def get_winner(game):
         return game[0][0]
     if game[0][2] == game[1][1] == game[2][0] != '':
         return game[0][2]
-
 
 def valid_coord(game, inp):
     try:
@@ -96,17 +88,14 @@ def valid_coord(game, inp):
         return False
     return True
 
-
 def coords_to_row_col(x, y):
     col = int(x) - 1
     row = int(y) - 1
     return row, col
 
-
 def get_coords(inp):
     x, y = inp.strip().split(" ")
     return int(x), int(y)
-
 
 def make_move(game, x, y, symb):
     row, col = coords_to_row_col(x, y)
