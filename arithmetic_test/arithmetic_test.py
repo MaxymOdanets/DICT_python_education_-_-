@@ -1,31 +1,21 @@
 import random
 
-num_list = [2, 3, 4, 5, 6, 7, 8, 9]
-sign_list = ['+', '-', '*']
-
-a = random.choice(num_list)
-b = random.choice(num_list)
-sign = random.choice(sign_list)
-print(a, sign, b)
-
-Input = int(input(">"))
-addition = 0
-subtraction = 0
-multiplication = 0
-
-if sign == "+":
-    addition = int(a) + int(b)
-elif sign == "-":
-    subtraction = int(a) - int(b)
-elif sign == "*":
-    multiplication = int(a) * int(b)
-
-if Input == addition:
-    print("Right!")
-elif Input == subtraction:
-    print("Right!")
-elif Input == multiplication:
-    print("Right!")
-else:
-    print("Wrong")
-
+mark = 0
+Input = 0
+for _ in range(5):
+    operations = [" + ", " - ", " * "]
+    question = str(random.randint(2, 9)) + random.choice(operations) + str(random.randint(2, 9))
+    print(question)
+    while True:
+        try:
+            Input = int(input(">"))
+            if Input == eval(question):
+                print("Right!")
+                mark += 1
+            else:
+                print("Wrong!")
+            break
+        except ValueError:
+            print("Incorrect format.")
+            continue
+print("Your mark is {}/5.".format(mark))
