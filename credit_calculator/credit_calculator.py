@@ -4,7 +4,7 @@ from tasks import BrainOfCalc
 class CreditCalc:
     task = ''
     while task != 'ex':
-        task = input("What do you want to calculate?\n\
+        task = input(" What do you want to calculate?\n\
 type 'n' for number of monthly payments,\n\
 type 'a' for annuity monthly payment amount,:\n\
 type 'p' for loan principal:\n\
